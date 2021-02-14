@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 public class Grid {
 	
 	private Entity[][] gridrepresentation;

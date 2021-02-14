@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 public class Perceptron {
 	
 	private double weight;

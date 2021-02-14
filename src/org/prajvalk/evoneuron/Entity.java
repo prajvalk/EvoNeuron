@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 public abstract class Entity {
 	
 	protected Grid reference;

@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 public class Cell extends Entity {
 	
 	private NEATNeuralNet nnn;
@@ -113,13 +115,11 @@ public class Cell extends Entity {
 	}
 	
 	public NEATNeuralNet replicateNNWithMutation(double nnF, double nnwtF) {
-		NEATNeuralNet dnnn = nnn.clone();
-		dnnn.mutate();
-		return dnnn;
+		return null;
 	}		
 	
 	@Override
-	public String getName() { return "Cell"; } 
+	public String getName() { return "Cell"; }
 	
 	public int getLifetime() {
 		return lifetime;

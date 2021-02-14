@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 import java.util.Vector;
 
 public class Substrate {

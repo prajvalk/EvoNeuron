@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 public class Empty extends Entity {
 
 	public Empty(Grid g, int posx, int posy) {
@@ -8,6 +10,6 @@ public class Empty extends Entity {
 	public void triggerFunction() {}
 	
 	@Override
-	public String getName() { return "Empty"; } 
+	public String getName() { return "Empty"; }
 
 }

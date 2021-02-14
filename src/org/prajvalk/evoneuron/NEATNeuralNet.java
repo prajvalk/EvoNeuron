@@ -1,3 +1,5 @@
+package org.prajvalk.evoneuron;
+
 import java.util.Vector;
 
 public class NEATNeuralNet {
@@ -11,12 +13,8 @@ public class NEATNeuralNet {
 	private double bias;
 	
 	public NEATNeuralNet(int depth) {
-		neuralnet = new Vector<Vector<Perceptron>>(1,1);
+		neuralnet = new Vector<>(1, 1);
 		bias = Math.random();
-	}
-	
-	public NEATNeuralNet(Vector<Vector<Perceptron>> vvp) {
-		neuralnet = vvp.clone();
 	}
 	
 	public void generateNewNN() {
@@ -71,12 +69,11 @@ public class NEATNeuralNet {
 	}
 	
 	public void mutate(double nnFactor, double nnwtFactor) {
-		float nncf = Math.random() * nnFactor;
-		float nnwtcf = Math.random() * nnwtFactor;
+		float nncf = (float)(Math.random() * nnFactor);
+		float nnwtcf = (float)(Math.random() * nnwtFactor);
 		if(nncf >= NN_MUTATION_THRESHOLD) {
 			int events = (int) (nncf - NN_MUTATION_THRESHOLD);
 			for(int i=0;i<events;i++) {
-				int randlayer = 1 + Math.random() * 
 			}				
 		} 
 		if(nnwtcf >= NNWT_MUTATION_THRESHOLD) {
@@ -91,11 +88,6 @@ public class NEATNeuralNet {
 	public double factf(double inp) {
 		if(inp <= 0) return 0;
 		return inp;
-	}		
-	
-	@Override
-	public NEATNeuralNet clone() {
-		return new NEATNeuralNet(neuralnet);
 	}
 	
 }
